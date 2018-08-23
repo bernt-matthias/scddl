@@ -243,7 +243,7 @@ fi
 diamond \
   makedb \
   --threads "$cores" \
-  --in "$d_in"/pdbaa \
+  --in "$d_in"/"$name" \
   --taxonmap "$d_tm"/pdb.accession2taxid \
   --taxonnodes "$d_tn"/nodes.dmp \
   --db "$output" ||
