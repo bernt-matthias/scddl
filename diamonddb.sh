@@ -244,7 +244,7 @@ diamond \
   makedb \
   --threads "$cores" \
   --in "$d_in"/"$name" \
-  --taxonmap "$d_tm"/pdb.accession2taxid \
+  --taxonmap "$(find "$d_tm" -name '*.accession2taxid' | head -1)" \
   --taxonnodes "$d_tn"/nodes.dmp \
   --db "$output" ||
   bailout 'generating diamond db failed'
